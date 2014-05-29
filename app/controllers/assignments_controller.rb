@@ -9,8 +9,6 @@ class AssignmentsController < ApplicationController
     :new_comment,
     :add_comment]
 
-  def index
-  end
 
   def new
     authorize! :create, Assignment
@@ -34,9 +32,6 @@ class AssignmentsController < ApplicationController
     authorize! :read, Assignment
     authorize! :read, Submission
     @submission = @assignment.submissions.accessible_by(current_ability, :read).where.not(workflow_state: "complete")
-    # @submission = @assignment.submissions.where.not(workflow_state: "complete")
-    # authorize! :read, Comment
-    # @submission = @assignment.submissions
     @comment = @assignment.comments
   end
 
@@ -48,9 +43,6 @@ class AssignmentsController < ApplicationController
     authorize! :update, Assignment
     @assignment.update_attributes assignment_params
     redirect_to location_course_assignment_path(@location, @course, @assignment)
-  end
-
-  def destroy
   end
 
   def new_comment

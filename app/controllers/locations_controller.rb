@@ -28,7 +28,6 @@ class LocationsController < ApplicationController
   def show
     authorize! :read, Course
     @course = @location.courses.accessible_by(current_ability)
-    # @course = @location.courses
   end
 
   def edit

@@ -26,14 +26,6 @@ var when_page_is_ready = function(){
   })
 
 
-  // if $(".locationboxes") = val("Charleston"),
-  //   $(".locationboxes").hide()
-  //   $(".").show()
-  // else if $(".locationboxes") == val("Atlanta");
-  //   $(".locationboxes").hide();
-  //   $(".").show()
-
-
 }
 $(document).ready(when_page_is_ready);
 $(document).on("page:load", when_page_is_ready);

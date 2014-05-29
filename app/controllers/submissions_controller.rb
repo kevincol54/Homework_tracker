@@ -34,15 +34,9 @@ class SubmissionsController < ApplicationController
     @comment = @submission.comments
   end
 
-  def edit
-  end
-
   def update
     @submission.update_attributes submission_params
     redirect_to location_course_assignment_submission_path(@location, @course, @assignment, @submission)
-  end
-
-  def destroy
   end
 
   def reviewing
@@ -66,10 +60,6 @@ class SubmissionsController < ApplicationController
     end
   end
 
-  # def new_comment
-  #   @comment = @submission.comments.new
-  # end
-
   def add_comment
     @comment = @submission.comments.create comment_params.merge(user_id: current_user.id, name: current_user.name)
 
@@ -79,7 +69,6 @@ class SubmissionsController < ApplicationController
   end
 
   private
-
   def submission_params
     params.require(:submission).permit(:links,
       :user_id,
