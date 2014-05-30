@@ -45,10 +45,6 @@ class AssignmentsController < ApplicationController
     redirect_to location_course_assignment_path(@location, @course, @assignment)
   end
 
-  def new_comment
-    @comment = Comment.new
-  end
-
   def add_comment
     @comment = @assignment.comments.create comment_params.merge(user_id: current_user.id, name: current_user.name)
 

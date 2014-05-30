@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
   has_many :courses, through: :join_tables
   has_many :assignments
   has_many :submissions
+  has_many :comments
 end
