@@ -299,11 +299,4 @@ Assignment.create!(
 
 ###############################################
 
-Submission.create!(
-  user_id:
-  assignment_id:
-  workflow_state:
-  name:
-  user_name:
-  )
 
