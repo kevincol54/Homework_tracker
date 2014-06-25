@@ -1,5 +1,25 @@
-== README
+==About
+This app was built for teachers to be able to track students homework. When a student signs up, they have the ability to pick which location and courses thye belong to. Once signed up, a student can see all the different assignments for a class. A student can submit homeworks that have links to any stuff having to do with the assignment. They can only see their own submissions and their submissions are tracked with either newly submitted, complete, or incomplete states. The teacher is the only one with the ability to view/change the state. There are comments on each assignment so all the students can talk with eachother about it. There are also comments on the submissions that only the student who owns the submission and teacher can see. A student/teacher will recieve an email each time someone makes a new comment.
 
+==Technologies Used
+
+* Ruby/Rails
+
+* jQuery
+
+* AJAX
+
+* Nested Forms
+
+* Mailers
+
+* CanCan
+
+* Devise
+
+* Workflow State Machine
+
+==Installation
 
 * Install Ruby V2.1.1
 
